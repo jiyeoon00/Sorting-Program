@@ -1,3 +1,5 @@
+package com.example.mypackage;
+
 import java.util.Comparator;
 
 public class MergeSorter extends Sorter {

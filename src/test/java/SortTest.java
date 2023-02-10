@@ -1,6 +1,10 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
 
+import com.example.mypackage.BubbleSorter;
+import com.example.mypackage.MergeSorter;
+import com.example.mypackage.Sorter;
+
 public class SortTest {
     @Test
     void mergeNumberAscendingTest() {

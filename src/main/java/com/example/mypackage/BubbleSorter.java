@@ -1,3 +1,5 @@
+package com.example.mypackage;
+
 public class BubbleSorter extends Sorter {
     public Object[] sort(Object[] array) {
         for (int i = 1; i < array.length; i++) {

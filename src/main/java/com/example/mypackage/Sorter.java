@@ -1,15 +1,13 @@
+package com.example.mypackage;
+
 import java.util.Comparator;
 
 public abstract class Sorter {
-    Comparator comparator;
+    Comparator comparator = Comparator.naturalOrder();
 
-    abstract Object[] sort(Object[] arr);
+    public abstract Object[] sort(Object[] arr);
 
     public void setAscendingOrder() {
         comparator = Comparator.reverseOrder();
-    }
-
-    public void setDescendingOrder() {
-        comparator = Comparator.naturalOrder();
     }
 }

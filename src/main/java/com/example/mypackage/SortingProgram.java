@@ -1,10 +1,11 @@
 package com.example.mypackage;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 import static com.example.mypackage.SharedFinalValue.*;
 
-public class Program {
+public class SortingProgram {
 
     Scanner scanner = new Scanner(System.in);
 
@@ -24,12 +25,12 @@ public class Program {
         selectedType = null;
         sorter = null;
 
-        executeInitialMenu();
+        takeAndSetDataType();
         takeAndSetSortingAlgorithm();
         takeAndSetSortingOrder();
-        takeArrayForSort();
+        takeArray();
         Object[] sortedArr = sorter.sort(arr);
-        printSortedObjects(sortedArr);
+        printSortedObjects(arr);
     }
 
     private int takeSelectionNumber() {
@@ -37,7 +38,7 @@ public class Program {
         return scanner.nextInt();
     }
 
-    private void executeInitialMenu() {
+    private void takeAndSetDataType() {
         System.out.println(SharedFinalValue.SORTING_NUMBERS_NUMBER +". Sort numbers");
         System.out.println(SharedFinalValue.SORTING_WORDS_NUMBER +". Sort words");
         System.out.println(EXIT_NUMBER + ". Quit");
@@ -86,11 +87,11 @@ public class Program {
                 sorter.setAscendingOrder();
                 break;
             case DESCENDING_ORDER_NUMBER:
-                sorter.setDescendingOrder();
+                break;
         }
     }
 
-    private void takeArrayForSort() {
+    private void takeArray() {
         String sortedObjectType = selectedType.getSortedObjectType();
         System.out.println("The "+ sortedObjectType +" to be sorted");
         System.out.print("> ");
@@ -102,10 +103,11 @@ public class Program {
 
     private void takeObjectsForSort(int NumberOfObjectsForSort) {
         arr = new Object[NumberOfObjectsForSort];
+        Arrays.stream(arr).sorted();
         for (int i = 0; i < arr.length; i++) {
             arr[i] = selectedType.takeObject();
         }
-    };
+    }
 
     private void printSortedObjects(Object[] arr) {
         System.out.println("<Results>");
