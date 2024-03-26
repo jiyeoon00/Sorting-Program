@@ -1,6 +1,5 @@
 package com.example.mypackage;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 import static com.example.mypackage.SharedFinalValue.*;
@@ -9,9 +8,9 @@ public class SortingProgram {
 
     Scanner scanner = new Scanner(System.in);
 
-    DataType selectedType;
-    Sorter sorter;
-    Object[] arr;
+    DataType selectedType = null;
+    Sorter sorter = null;
+    Object[] arr = null;
 
     public void start() {
         while (true) {
@@ -22,15 +21,12 @@ public class SortingProgram {
     private void executeProgram() {
         System.out.println("자바 정렬 프로그램입니다.");
 
-        selectedType = null;
-        sorter = null;
-
         takeAndSetDataType();
         takeAndSetSortingAlgorithm();
         takeAndSetSortingOrder();
         takeArray();
         Object[] sortedArr = sorter.sort(arr);
-        printSortedObjects(arr);
+        printSortedObjects(sortedArr);
     }
 
     private int takeSelectionNumber() {
@@ -103,9 +99,8 @@ public class SortingProgram {
 
     private void takeObjectsForSort(int NumberOfObjectsForSort) {
         arr = new Object[NumberOfObjectsForSort];
-        Arrays.stream(arr).sorted();
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = selectedType.takeObject();
+            arr[i] = selectedType.takeObject(scanner);
         }
     }
 

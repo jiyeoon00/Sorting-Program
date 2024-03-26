@@ -20,7 +20,6 @@ public class SortTest {
     @Test
     void mergeNumberDescendingTest() {
         Sorter sorter = new MergeSorter();
-        sorter.setDescendingOrder();
         Object[] array = {1, 12, 5, 45, 2};
 
         Object[] sortedArray = sorter.sort(array);
@@ -42,7 +41,6 @@ public class SortTest {
     @Test
     void mergeWordDescendingTest() {
         Sorter sorter = new MergeSorter();
-        sorter.setDescendingOrder();
         Object[] array = {"cat", "tiger", "dog", "lion", "bird"};
 
         Object[] sortedArray = sorter.sort(array);
@@ -64,7 +62,6 @@ public class SortTest {
     @Test
     void bubbleNumberDescendingTest() {
         Sorter sorter = new BubbleSorter();
-        sorter.setDescendingOrder();
         Object[] array = {1, 12, 5, 45, 2};
 
         Object[] sortedArray = sorter.sort(array);
@@ -86,7 +83,6 @@ public class SortTest {
     @Test
     void bubbleWordDescendingTest() {
         Sorter sorter = new BubbleSorter();
-        sorter.setDescendingOrder();
         Object[] array = {"cat", "tiger", "dog", "lion", "bird"};
 
         Object[] sortedArray = sorter.sort(array);

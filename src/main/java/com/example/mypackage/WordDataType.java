@@ -1,5 +1,7 @@
 package com.example.mypackage;
 
+import java.util.Scanner;
+
 public class WordDataType implements DataType {
     @Override
     public String getSortedObjectType() {
@@ -7,7 +9,7 @@ public class WordDataType implements DataType {
     }
 
     @Override
-    public Object takeObject() {
+    public Object takeObject(Scanner scanner) {
         return scanner.next();
     }
 }
