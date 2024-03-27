@@ -17,8 +17,8 @@ _**✨프로그램 기능 요약✨**_
 
 <br>    
 
-## 클래스 구조도
-![image](https://github.com/jiyeoon00/jiyeoon00/assets/77728683/fd94e10f-cdea-4ca3-9b15-63446551b9b6)
+## 1️⃣ 클래스 구조도
+![image](https://github.com/jiyeoon00/Sorting-Program/assets/77728683/76697b9d-ee7e-480c-8ccc-d753fe5ff18f)
 
 각각의 구성 요소는 다음과 같이 설계되어 있습니다.
 
@@ -34,7 +34,7 @@ BubbleSorter와 MergeSorter 클래스: Sorter 클래스를 상속받아 각각 �
 
 <br>  
 
-## 전략패턴 적용
+## 2️⃣ 전략패턴 적용
 전략패턴을 통해 OOP의 5가지 설계원칙인, SOLID를 준수했습니다. 기능을 사용하는 부분과 구현하는 부분을 분리, 캡슐화를 적용함으로써 코드의 유지보수와 확장성을 향상시켰습니다.
 
 <br>  
